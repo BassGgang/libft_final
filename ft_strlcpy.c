@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:57:07 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/27 12:30:53 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/04/27 19:10:20 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 int	ft_strlen(char *c)
 {
+	if (c == NULL)
+		return (0);
 	int	i;
 
 	i = 0;
@@ -26,10 +28,16 @@ int	ft_strlen(char *c)
 size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
 	int	i;
+	int dstsize;
 
 	i = 0;
-	while (size - 1 > 0)
+	dstsize = ft_strlen(dst);
+	// printf("size = %d\n",(int)size);
+	if (size == 0 || dst == NULL)
+		return (ft_strlen(src));
+	while ((int)size - 1 > 0 && src[i] != '\0')
 	{
+		// printf("wan");
 		dst[i] = src[i];
 		i++;
 		size--;
@@ -40,25 +48,18 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size)
 
 // int	main(void)
 // {
-// 	char	b[] = "a";
-// 	char	a[] = "jyonta";
+// 	// char	a[] = NULL;
+// 	char	b[] = "";
+	
+// 	// printf("%s\n", a);
+// 	ft_strlcpy(NULL, b, 0);
+// 	printf("%lu\n", ft_strlcpy(NULL, b, 0));
 
-// 	ft_strlcpy(a, b, 10);
-// 	printf("%s\n", a);
-// 	printf("%lu\n", ft_strlcpy(a, b, 5));
-// 	return (0);
-// }
-
-// // GENUIN
-// int main(void)
-// {
-//     char a[] = "kenta";
-//     char b[] = "jyonta";
-
-// 	strlcpy(a,b,5);
-
-//     printf("%s\n",a);
-//     printf("%lu\n",strlcpy(a,b,5));
+//     // char ag[] = NULL;
+//     char bg[] = "";
+// 	strlcpy(NULL,bg,0);
+//     // printf("%s\n",ag);
+//     printf("%lu\n",strlcpy(NULL,bg,0));
 
 // return (0);
 // }

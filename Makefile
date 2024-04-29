@@ -6,7 +6,7 @@
 #    By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 15:38:32 by kmatsuna          #+#    #+#              #
-#    Updated: 2024/04/27 15:55:06 by kmatsuna         ###   ########.fr        #
+#    Updated: 2024/04/29 21:10:08 by kmatsuna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,10 +53,10 @@ SRCS = 	ft_bzero.c \
 		ft_strlcpy.c\
 		ft_memmove.c\
 		ft_strlcat.c\
-		# ft_tolower.c\
-		# ft_toupper.c\
-		# ft_strchr.c\
-		# ft_strrchr.c\
+		ft_toupper.c\
+		ft_tolower.c\
+		ft_strchr.c\
+		ft_strrchr.c\
 		# ft_strncmp.c\
 		# ft_memchr.c\
 		# ft_memcmp.c\

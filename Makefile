@@ -6,7 +6,7 @@
 #    By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 15:38:32 by kmatsuna          #+#    #+#              #
-#    Updated: 2024/05/02 17:58:03 by kmatsuna         ###   ########.fr        #
+#    Updated: 2024/05/02 20:43:32 by kmatsuna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,9 +57,9 @@ SRCS = 	ft_bzero.c \
 		ft_tolower.c\
 		ft_strchr.c\
 		ft_strrchr.c\
-		# ft_strncmp.c\
-		# ft_memchr.c\
-		# ft_memcmp.c\
+		ft_strncmp.c\
+		ft_memchr.c\
+		ft_memcmp.c\
 		
 OBJS = $(SRCS:.c=.o)
 $(NAME) :    $(OBJS)

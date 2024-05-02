@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 21:11:26 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/05/02 21:57:29 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:50:13 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	while(s1[i] != '\0' && i < (int)len)
 	{
-		while(s1[i + j] == s2[j])
+		while(s1[i + j] == s2[j]) //s1[i +j] != 0 && s2[j] != 0 がないと2回多く回る
 		{
 			printf("%c\n",s1[i + j]);
 			printf("%c\n",s2[j]);
@@ -41,21 +41,21 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 			printf("\n");
 			j ++;
 		}
+		if (j == ft_strlen((char *)s2))
+			return ((char *)&s1[i]);
 		i ++;
 	}
 	printf("j = %d\n",j);
 	printf("strlen = %d\n",ft_strlen((char *)s2));
-	if (j-1 == ft_strlen((char *)s2))
-		return ((char *)&s1[i]);
 	return (NULL);
 
 }
 
 int main (void)
 {
-	char a[] = "aaakenaaaa";
+	char a[] = "aaakenaaa";
 	char b[] = "ken";
-	// printf("%s\n",strnstr(a,b,9));
-	 printf("%s\n",ft_strnstr(a,b,9));
+	 printf("mine =%s\n",ft_strnstr(a,b,9));
+	printf("\n\ngen =%s\n",strnstr(a,b,9));
     return 0;
 }

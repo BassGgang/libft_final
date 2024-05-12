@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:06:08 by jnishimu          #+#    #+#             */
-/*   Updated: 2024/05/07 23:38:47 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/12 07:35:28 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,16 @@ static int chenum(const char s)
 
 static int is_not_long_rang(long a, int b)
 {
+	// printf("b = %d\n",b);
 	long long_max;
-	int long_div;
-	int long_mod;
+	long int long_div;
+	long int long_mod;
 
 	long_max = 9223372036854775807;
 	long_div = long_max / 10;
 	long_mod = long_max % 10;
-	return (a > long_div || (a < long_div && b > long_mod));
+	// printf("long div = %ld\n",long_div);
+	return (a > long_div || (a == long_div && b > long_mod));
 }
 
 int	ft_strcmp(const char *s1, const char *s2 )
@@ -78,8 +80,7 @@ int ft_atoi(const char *str)
     }//ピシンのものと違うので、やるならここが簡略化できる
     while(chenum(str[i]))
     {
-		// printf("is_long = %d\n",is_not_long_rang(re,str[i]));
-		if(!is_not_long_rang(re,str[i]))
+		if(is_not_long_rang(re,str[i]-'0'))
 		{
 			if(pm == -1)
 				re =(int)0x8000000000000000L;
@@ -94,11 +95,22 @@ int ft_atoi(const char *str)
     return (re * pm);
 }
 
-int main (void)
-{
-    char a [] = "9223372036854775808";
-    printf("gen =%d\n",atoi(a));
-    printf("mine %d\n",ft_atoi(a));
+// --MEMO--
+// int is_not_long_rangの戻り値である
+// 	return (a > long_div || (a == long_div && b > long_mod));
+// の条件式に注意が必要。
 
-    return 0;
-}
+// --MEMO--
+// is_not_long_rangにて不具合が発生。
+// →具体的にはstr[i]をstr[i]-'0'として引数を渡したがis_not_rang関数内で反映されない
+// →ft_atoi関数内でprintfを行って見るとis_not_rang関数にも反映された。
+// →テスターでも反映されないものが判定されいたので割とガチで謎
+
+// int main (void)
+// {
+//     char a [] = "-4";
+//     printf("gen =%d\n",atoi(a));
+//     printf("mine %d\n",ft_atoi(a));
+
+//     return 0;
+// }

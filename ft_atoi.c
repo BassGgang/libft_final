@@ -6,34 +6,35 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:06:08 by jnishimu          #+#    #+#             */
-/*   Updated: 2024/05/12 07:35:28 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:01:21 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-static int chesp(const char s)
+static int	chesp(const char s)
 {
-    if (s == '\n' || s == '\f' || s == '\t' || s == '\v' || s == '\r' || s == ' ')
-        return (1);
-    return (0);
+	if (s == '\n' || s == '\f' || s == '\t' || s == '\v' || s == '\r'
+		|| s == ' ')
+		return (1);
+	return (0);
 }
 
-static int chenum(const char s)
+static int	chenum(const char s)
 {
-    if('0' <= s && s <= '9')
-        return (1);
-    return (0);
+	if ('0' <= s && s <= '9')
+		return (1);
+	return (0);
 }
 
-static int is_not_long_rang(long a, int b)
+static int	is_not_long_rang(long a, int b)
 {
+	long		long_max;
+	long int	long_div;
+	long int	long_mod;
+
 	// printf("b = %d\n",b);
-	long long_max;
-	long int long_div;
-	long int long_mod;
-
 	long_max = 9223372036854775807;
 	long_div = long_max / 10;
 	long_mod = long_max % 10;
@@ -41,58 +42,55 @@ static int is_not_long_rang(long a, int b)
 	return (a > long_div || (a == long_div && b > long_mod));
 }
 
-int	ft_strcmp(const char *s1, const char *s2 )
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
-	while(s1[i] != '\0' || s2[i] != '\0' )
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
 		{
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
-		i ++;
+		i++;
 	}
 	return (0);
 }
 
-
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int i;
-    int pm;
-	long int re;
+	int			i;
+	int			pm;
+	long int	re;
 
-    i = 0;
-    pm = 1;
+	i = 0;
+	pm = 1;
 	re = 0;
-	if (!ft_strcmp(str,"-9223372036854775808"))
+	if (!ft_strcmp(str, "-9223372036854775808"))
 		return ((int)0x8000000000000000L);
-    while(chesp(str[i]))
-        i++;
-    if (str[i] == '-' || str[i] == '+')
-    {
-        if(str[i] == '-')
-        	pm = pm * -1;
-        i ++;
-    }//ピシンのものと違うので、やるならここが簡略化できる
-    while(chenum(str[i]))
-    {
-		if(is_not_long_rang(re,str[i]-'0'))
+	while (chesp(str[i]))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			pm = pm * -1;
+		i++;
+	}
+	while (chenum(str[i]))
+	{
+		if (is_not_long_rang(re, str[i] - '0'))
 		{
-			if(pm == -1)
-				re =(int)0x8000000000000000L;
+			if (pm == -1)
+				re = (int)0x8000000000000000L;
 			else
 				re = (int)9223372036854775807;
 			break ;
 		}
-		// printf("re = %ld\n",re);
-        re = re * 10 + (str[i] - '0');
-        i ++;
-    }
-    return (re * pm);
+		re = re * 10 + (str[i] - '0');
+		i++;
+	}
+	return (re * pm);
 }
 
 // --MEMO--
@@ -112,5 +110,5 @@ int ft_atoi(const char *str)
 //     printf("gen =%d\n",atoi(a));
 //     printf("mine %d\n",ft_atoi(a));
 
-//     return 0;
+//     return (0);
 // }

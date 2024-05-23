@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jnishimu <jnishimu@student.42.fr>          +#+  +:+       +#+         #
+#    By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 15:38:32 by kmatsuna          #+#    #+#              #
-#    Updated: 2024/05/07 13:45:21 by jnishimu         ###   ########.fr        #
+#    Updated: 2024/05/23 21:27:22 by kmatsuna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,10 @@ SRCS = 	ft_bzero.c \
 		ft_memcmp.c\
 		ft_strnstr.c \
 		ft_atoi.c \
-		
+		ft_calloc.c\
+		ft_strdup.c\
+		ft_substr.c\
+
 OBJS = $(SRCS:.c=.o)
 $(NAME) :    $(OBJS)
 	ar rc $@ $^
@@ -80,4 +83,4 @@ fclean : clean
 
 re : fclean all
 
-#.PHONY : all clean fclean re
+.PHONY : all clean fclean re

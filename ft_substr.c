@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 21:26:30 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/05/23 22:10:42 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/26 16:17:32 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 
 	// size =ft_strlen((char *)s)+1;
     if (ft_strlen((char *)s) < start)
-        return(s + ft_strlen((char *)s));
+        return((char *)ft_calloc(1,1));//文字列のNULL末端だけを返したい
 
     strlen =ft_strlen((char *)s) - start; 
     if (strlen < len)

@@ -6,42 +6,11 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:38:41 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/27 17:45:47 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/26 16:48:20 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-// #include "tester.h"
-
-int	ft_strlen(const char *c)
-{
-	int	i;
-	
-	if (!c)
-		return 0;
-	i = 0;
-	while (*c != 0)
-	{
-		c++;
-		i++;
-	}
-	return (i);
-}
-
-static size_t	ft_strnlen(char *s, size_t maxlen)
-{
-	size_t	len;
-
-	len = 0;
-	while (len < maxlen && *s++)
-	{
-		len++;
-	}
-	return (len);
-}
-
+#include "libft.h"
 // size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 // {
 //     int i;

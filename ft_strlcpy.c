@@ -6,26 +6,13 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:57:07 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/27 19:16:05 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/26 16:49:38 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strlen(char *c)
-{
-	if (c == NULL)
-		return (0);
-	int	i;
-
-	i = 0;
-	while (c[i] != 0)
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcpy(char *dst, char *src, size_t size)
+size_t	ft_strlcpy(char *dst,const char *src, size_t size)
 {
 	int	i;
 	int dstsize;

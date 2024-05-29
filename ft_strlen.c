@@ -6,16 +6,16 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:56:04 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/22 19:37:03 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/05/26 15:20:46 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(char *c)
+size_t	ft_strlen(const char *c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (c[i] != 0)

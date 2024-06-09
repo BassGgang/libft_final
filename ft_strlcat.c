@@ -6,11 +6,12 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:38:41 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/05/26 16:48:20 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:54:34 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 // {
 //     int i;
@@ -31,29 +32,27 @@
 //     return (ft_strlen(dst));
 // }
 
-
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int i;
-	int j;
-	int k;
-	int re;
+	int	i;
+	int	j;
+	int	k;
+	int	re;
 
 	i = ft_strlen(dst);
 	j = 0;
 	k = dstsize;
 	re = i + ft_strlen(src);
-	if((size_t)i >= dstsize)
-		return((size_t)ft_strlen(src) + dstsize);
-	while(k - i - 1 > 0 && src[j] != '\0')
+	if ((size_t)i >= dstsize)
+		return ((size_t)ft_strlen(src) + dstsize);
+	while (k - i - 1 > 0 && src[j] != '\0')
 	{
 		dst[i] = src[j];
-		i ++;
-		j ++;
-    }
+		i++;
+		j++;
+	}
 	dst[i] = '\0';
-	// printf("aaa = %d\n",i + ft_strlen(src));
-	return(re);
+	return (re);
 }
 
 // int main(void)
@@ -71,7 +70,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 //     // printf("    %s\n\n" ,a);
 
 // 	printf("\n");
-    
+
 //     char ag[30] = "";
 //     char bg[] = "matsu";
 //     strlcat(ag,bg,8);
@@ -83,7 +82,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	printf("bg  =%d\n",ft_strlen(bg));
 // 	printf("ag %s\n" ,ag);
 //     // printf("gen %s\n" ,ag);
-//     return 0;
+//     return (0);
 // }
 
 // int main(void)
@@ -93,9 +92,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	printf("a  = %d\n", ft_strlen(a));
 
 // 	printf("ag = %d\n", ft_strlen(ag));
-// 	return 0;
+// 	return (0);
 // }
-
 
 // //TESTER
 // int	main(void)

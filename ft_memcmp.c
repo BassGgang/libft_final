@@ -6,23 +6,23 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 20:23:43 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/05/02 20:44:51 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:50:56 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int i;
-	const char *sc1;
-	const char *sc2;
+	int			i;
+	const char	*sc1;
+	const char	*sc2;
 
 	sc1 = s1;
 	sc2 = s2;
-
 	i = 0;
-	while(i < (int)n)
+	while (i < (int)n)
 	{
 		if (sc1[i] != sc2[i])
 			return ((int)sc1[i] - (int)sc2[i]);

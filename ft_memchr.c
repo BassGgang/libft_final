@@ -6,27 +6,27 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:22:16 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/05/02 20:22:55 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:50:36 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
-    char *sc;
+	int		i;
+	char	*sc;
 
-    i = 0;
-    sc =  (char *) s ;   
-    while( i < (int) n)
-    {
-        if(sc[i] == (char) c)
-            return ((void *)&s[i]);
-        i ++;
-    }
-    return (NULL);
+	i = 0;
+	sc = (char *)s;
+	while (i < (int)n)
+	{
+		if (sc[i] == (char)c)
+			return ((void *)&s[i]);
+		i++;
+	}
+	return (NULL);
 }
 
 // --MEMO---
@@ -47,7 +47,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
 //     char *sc;
 
 //     i = 0;
-//     sc =  (char *) s ;   
+//     sc =  (char *) s ;
 //     while(i < (int) n)
 //     {
 //         if(sc[i] == (char) c)
@@ -63,9 +63,8 @@ void    *ft_memchr(const void *s, int c, size_t n)
 // voidは何かにキャストしないと使えない
 
 // --MEMO---
-//     sc =  (char *) s ;   
+//     sc =  (char *) s ;
 // この書き方注意
-
 
 // int main (void)
 // {
@@ -73,5 +72,5 @@ void    *ft_memchr(const void *s, int c, size_t n)
 //     // char b[] = "cba";
 //     printf("mine=%p\n",ft_memchr(a,'b',3));
 //     printf("gen =%p\n",memchr(a,'b',3));
-//     return 0;
+//     return (0);
 // }

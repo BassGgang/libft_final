@@ -6,27 +6,27 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:24:15 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 19:19:56 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:49:57 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int get_digit(int n)
+static int	get_digit(int n)
 {
-	int i;
+	int	i;
 
-	if(n == 0)
+	if (n == 0)
 		return (1);
-	while(n > 0)
+	while (n > 0)
 	{
-		n = n/10;
-		i ++;
+		n = n / 10;
+		i++;
 	}
 	return (i);
 }
 
-static char *get_figure(int n, int digit, char *str)
+static char	*get_figure(int n, int digit, char *str)
 {
 	// while(digit >= 0)
 	// {
@@ -37,16 +37,16 @@ static char *get_figure(int n, int digit, char *str)
 	return (str);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char *str;
+	char *str;
 	int digit;
 
 	digit = get_digit(n);
-    str = (char *)malloc(sizeof(char) * (digit + 1));
+	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (str == NULL)
 		return (NULL);
-	printf("digit = %d\n",digit);
+	printf("digit = %d\n", digit);
 	str = get_figure(n, digit, str);
 	return (str);
 }

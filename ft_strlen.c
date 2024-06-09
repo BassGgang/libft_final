@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:56:04 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 11:57:53 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:55:08 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,4 @@ size_t	ft_strlen(const char *c)
 // 	printf("num = %zu\n", strlen(a));
 
 // 	return (0);
-// } 
+// }

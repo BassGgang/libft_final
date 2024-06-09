@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:06:08 by jnishimu          #+#    #+#             */
-/*   Updated: 2024/05/12 18:01:21 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/09 20:41:09 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ static int	is_not_long_rang(long a, int b)
 	long int	long_div;
 	long int	long_mod;
 
-	// printf("b = %d\n",b);
 	long_max = 9223372036854775807;
 	long_div = long_max / 10;
 	long_mod = long_max % 10;
-	// printf("long div = %ld\n",long_div);
 	return (a > long_div || (a == long_div && b > long_mod));
 }
 
@@ -92,7 +90,6 @@ int	ft_atoi(const char *str)
 	}
 	return (re * pm);
 }
-
 // --MEMO--
 // int is_not_long_rangの戻り値である
 // 	return (a > long_div || (a == long_div && b > long_mod));

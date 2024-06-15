@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:24:15 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 20:49:57 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/15 20:13:08 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,15 @@ static int	get_digit(int n)
 {
 	int	i;
 
+	i = 0;
 	if (n == 0)
-		return (1);
-	while (n > 0)
+		return (0);
+	if (n < 0)
+	{
+		i++;
+		n = n * -1;
+	}
+	while (n > 10)
 	{
 		n = n / 10;
 		i++;
@@ -26,16 +32,16 @@ static int	get_digit(int n)
 	return (i);
 }
 
-static char	*get_figure(int n, int digit, char *str)
-{
-	// while(digit >= 0)
-	// {
-	// 	str [digit] = n % 10 + '0';
-	// 	n = n /10;
-	// 	digit --;
-	// }
-	return (str);
-}
+// static char	*get_figure(int n, int digit, char *str)
+// {
+// 	while(digit >= 0)
+// 	{
+// 		str [digit] = n % 10 + '0';
+// 		n = n /10;
+// 		digit --;
+// 	}
+// 	return (str);
+// }
 
 char	*ft_itoa(int n)
 {
@@ -46,7 +52,27 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (str == NULL)
 		return (NULL);
-	printf("digit = %d\n", digit);
-	str = get_figure(n, digit, str);
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = n * -1;
+	}
+	while(n > 0)
+	{
+		str [digit] = n % 10 + '0';
+		n = n /10;
+		digit --;
+	}
 	return (str);
 }
+
+// char *ft_itoa(int n)
+// {
+// 	char *str;
+
+
+// 	printf("\n n =%d ",n);
+// 	return(str);
+// }

@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:24:15 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/16 15:47:47 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/16 16:04:14 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ static int	get_digit(long int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		digit;
-	long int long_int;
+	char		*str;
+	int			digit;
+	long int	long_int;
 
-	long_int = (long int) n;
+	long_int = (long int)n;
 	digit = get_digit(long_int);
 	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (str == NULL)

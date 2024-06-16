@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 08:26:14 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 20:46:15 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/16 15:59:01 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	bytes;
-	int	i;
+	size_t			bytes;
+	int				i;
 	unsigned char	*mem;
 
 	bytes = count * size;

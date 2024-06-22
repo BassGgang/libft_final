@@ -6,11 +6,12 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:33:19 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 20:51:46 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/22 22:31:45 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	get_size(char const *s, char c)
 {
@@ -59,7 +60,6 @@ char	**ft_split(char const *s, char c)
 	re = (char **)malloc(sizeof(char *) * (c_count + 1));
 	if (!re)
 		return (0);
-	printf("c count = %d\n", c_count);
 	while (i < c_count)
 	{
 		printf("index = %zu\n", index);

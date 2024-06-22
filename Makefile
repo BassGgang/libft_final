@@ -6,7 +6,7 @@
 #    By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 15:38:32 by kmatsuna          #+#    #+#              #
-#    Updated: 2024/06/09 19:05:00 by kmatsuna         ###   ########.fr        #
+#    Updated: 2024/06/22 19:12:57 by kmatsuna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,8 @@ SRCS = 	ft_bzero.c \
 		ft_strtrim.c\
 		ft_split.c\
 		ft_itoa.c\
+		ft_strmapi.c\
+		ft_striteri.c\
 
 OBJS = $(SRCS:.c=.o)
 $(NAME) :    $(OBJS)

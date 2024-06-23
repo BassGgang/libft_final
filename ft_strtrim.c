@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:21:56 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 21:01:07 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/23 15:31:17 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	*ft_strtrim(const char *s1, char const *set)
 
 	str = check_start(s1, set);
 	fin = check_fin(s1, set);
-	printf("fin = %zu\n", fin);
 	re = ft_substr(s1, str, fin - str);
 	return (re);
 }

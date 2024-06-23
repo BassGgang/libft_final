@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:33:19 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/22 22:31:45 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/23 15:30:13 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	while (i < c_count)
 	{
-		printf("index = %zu\n", index);
-		printf("next_index = %zu\n", next_index);
 		if (index != next_index)
 			re[i++] = ft_substr(s, (unsigned int)index, next_index - index);
 		index = next_index + 1;

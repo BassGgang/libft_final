@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 13:39:28 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/22 11:27:37 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/26 18:03:20 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	d = dst;
 	s = src;
 	i = 0;
+	if (dst == src)
+		return (dst);
 	while (n > 0)
 	{
 		d[i] = s[i];
@@ -30,6 +32,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// --MEMO--
+// if (dst == src)
+// 		return (dst);
+// この意味がよくわかんない
 
 /* int main (void)
 {

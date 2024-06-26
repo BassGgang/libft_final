@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:55:03 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 21:00:30 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:41:17 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ char	*ft_strrchr(const char *s, int c)
 			re = (char *)&s[i];
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
+	{
 		return ((char *)&s[i]);
-	if (re == NULL)
-		return (NULL);
+	}
 	return (re);
 }
+
 // ---MEMO---
 // reを初期化せずに%pを表示させようとすると「nullだから表示できない」と出力されるが、
 // re = NULL　がないとif文で引っかかってくれないので注意
@@ -43,3 +44,5 @@ char	*ft_strrchr(const char *s, int c)
 //     printf("gen =%p\n",strrchr(s,'4'));
 //     return (0);
 // }
+
+// 0 1 2 3 k e n \0

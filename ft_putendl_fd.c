@@ -6,21 +6,21 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 22:52:37 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/22 22:57:00 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:53:06 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s[i] != 0)
-    {
-		write(fd,&s[i],1);
-		i ++;
-    }
-    write(fd,"\n",1);
+	i = 0;
+	while (s[i] != 0)
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }

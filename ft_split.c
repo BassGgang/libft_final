@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:33:19 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/23 15:30:13 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2024/06/27 19:01:21 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,9 @@ char	**ft_split(char const *s, char c)
 	}
 	re[i] = 0;
 	return (re);
+}
+int	main(void)
+{
 }
 
 // int main(void)

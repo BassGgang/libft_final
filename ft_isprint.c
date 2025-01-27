@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:41:09 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/21 20:58:39 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:44:31 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,3 @@ int	ft_isprint(int c)
 		return (0);
 	return (1);
 }
-
-// int main (void)
-// {
-//     return (0);
-// }

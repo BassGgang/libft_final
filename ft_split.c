@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:33:19 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/09/05 13:55:48 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:40:14 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,3 @@ char	**ft_split(char const *s, char c)
 	re[i] = 0;
 	return (re);
 }
-// int	main(void)
-// {
-// }
-
-// int main(void)
-// {
-// 	char a[] = "ebi kani tatsuya";
-// 	char b = ' ';
-
-// 	ft_sprit(a,b);
-// }
-
-// 二次元配列なので、分けたら何文字になるか考える。
-// わかったら分ける

@@ -6,13 +6,12 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:59:52 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/21 20:58:15 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:32:09 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
-#include <stdio.h>
 
 int	ft_isalnum(int c)
 {
@@ -22,12 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/* int main(void)
-{
-	char i = 'a';cd
-	printf("mine = %d\n",ft_isalnum(i));
-	printf("ans  = %d\n",isalnum(i));
-	return (0);
-}
- */

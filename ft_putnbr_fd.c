@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 23:01:07 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/23 15:28:45 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:45:15 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	write_nbr(nbr, fd);
 }
-
-// --MEMO--
-// write_nbrの第一引数がマイナスが入ることはないが、
-// int max ＋１が来た場合は、オーバーフロして
-// int min が入ってきてしまい、バグる。
-// よって、long long int にする必要あり

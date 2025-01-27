@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:24:15 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/27 18:09:17 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:33:18 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,6 @@ static int	get_digit(long int n)
 	}
 	return (i);
 }
-
-// static char	*get_figure(int n, int digit, char *str)
-// {
-// 	while(digit >= 0)
-// 	{
-// 		str [digit] = n % 10 + '0';
-// 		n = n /10;
-// 		digit --;
-// 	}
-// 	return (str);
-// }
 
 char	*ft_itoa(int n)
 {
@@ -71,23 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	printf("digit:%d\n", get_digit(i));
-// 	printf("mine = %s\n", ft_itoa(i));
-// 	return (i);
-// }
-
-// char *ft_itoa(int n)
-// {
-// 	char *str;
-
-// 	printf("\n n =%d ",n);
-// 	return(str);
-// }

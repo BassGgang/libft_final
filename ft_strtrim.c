@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:21:56 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/23 15:31:17 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:42:33 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	is_include(char c, const char *set)
 	}
 	return (0);
 }
-//	この関数があっているかどうか確かめるにはどうしたらいいのか
 
 size_t	check_start(const char *s1, const char *set)
 {
@@ -59,11 +58,3 @@ char	*ft_strtrim(const char *s1, char const *set)
 	re = ft_substr(s1, str, fin - str);
 	return (re);
 }
-
-// --上から順にセット以外の文字がでてく流のを数える
-// 初めてその文字列が出てきたらスターと地点
-// ーー後ろから順番に数える
-// 出てきたら終点地点
-// それをsubstrに入れる
-
-//関数も2つ以上使う場合には切り出すのか

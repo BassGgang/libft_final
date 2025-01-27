@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:27:12 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 21:02:01 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:43:00 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-// int main (void)
-// {
-//     char a = 'a';
-//     printf("mine=%c\n",ft_tolower(a));
-//     printf("gen =%c\n",tolower(a));
-
-//     return (0);
-// }

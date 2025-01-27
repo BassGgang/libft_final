@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 13:17:30 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/21 20:57:28 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:31:28 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
-/* int main (void)
-{
-	char a[]= "0123456789";
-	// bzero(a+2, 3);
-	ft_bzero(a+2, 3);
-	printf("gen = %s",a);
-	return (0);
-} */

@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:51:37 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/04/21 20:58:23 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:44:21 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	char a = '2';
-// 	printf("ans = %d\n",ft_isalpha(a));
-// 	printf("ans = %d\n",isalpha(a));
-// 	return (0);
-// }

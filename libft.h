@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/27 20:53:30 by kmatsuna          #+#    #+#             */
+/*   Updated: 2025/01/27 20:53:34 by kmatsuna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <limits.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isascii(int c);

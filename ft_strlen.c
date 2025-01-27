@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:56:04 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/09 20:55:08 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:41:21 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,3 @@ size_t	ft_strlen(const char *c)
 		i++;
 	return (i);
 }
-
-//  int main(void)
-// {
-// 	char a[] = "ken";
-// 	printf("num = %zu\n", ft_strlen(a));
-// 	printf("num = %zu\n", strlen(a));
-
-// 	return (0);
-// }

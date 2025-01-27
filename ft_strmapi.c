@@ -6,7 +6,7 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:13:15 by kmatsuna          #+#    #+#             */
-/*   Updated: 2024/06/22 18:58:01 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:41:27 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
-
-// --MEMO--
-// ft_strlcpyはマロックで持ってきたstr	の最後にNULL終端をくっつけるため

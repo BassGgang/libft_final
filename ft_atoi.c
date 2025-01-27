@@ -6,89 +6,49 @@
 /*   By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:06:08 by jnishimu          #+#    #+#             */
-/*   Updated: 2025/01/26 20:43:22 by kmatsuna         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:28:49 by kmatsuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-static int	chesp(const char s)
+static size_t	ft_strlen_n(const char *str)
 {
-	if (s == '\n' || s == '\f' || s == '\t' || s == '\v' || s == '\r'
-		|| s == ' ')
-		return (1);
-	return (0);
-}
-
-static int	chenum(const char s)
-{
-	if ('0' <= s && s <= '9')
-		return (1);
-	return (0);
-}
-
-static int	is_not_long_rang(long a, int b)
-{
-	long		long_max;
-	long int	long_div;
-	long int	long_mod;
-
-	long_max = 9223372036854775807;
-	long_div = long_max / 10;
-	long_mod = long_max % 10;
-	return (a > long_div || (a == long_div && b > long_mod));
-}
-
-static int	ft_strcmp(const char *s1, const char *s2)
-{
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
-	}
-	return (0);
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+		i ++;
+	return (i);
 }
 
 int	ft_atoi(const char *str)
 {
+	u_int64_t	re;
+	int			sign;
 	int			i;
-	int			pm;
-	long int	re;
 
-	i = 0;
-	pm = 1;
 	re = 0;
-	if (!ft_strcmp(str, "-9223372036854775808"))
-		return ((int)0x8000000000000000L);
-	while (chesp(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	sign = 1;
+	i = 0;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str ++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
-			pm = pm * -1;
-		i++;
+		if (*str == '-')
+			sign = -1;
+		str ++;
 	}
-	while (chenum(str[i]))
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+		re = re * 10 + str[i++] - '0';
+	if ((ft_strlen_n(str) == 19 && *str != '0' && re > 9223372036854775807)
+		|| (ft_strlen_n(str) >= 20 && *str != '0' ))
 	{
-		if (is_not_long_rang(re, str[i] - '0'))
-		{
-			if (pm == -1)
-				re = (int)0x8000000000000000L;
-			else
-				re = (int)9223372036854775807;
-			break ;
-		}
-		re = re * 10 + (str[i] - '0');
-		i++;
+		if (sign == -1)
+			return (0);
+		return (-1);
 	}
-	return (re * pm);
+	return (re * sign);
 }
 
 // --MEMO--
@@ -101,7 +61,7 @@ int	ft_atoi(const char *str)
 // →具体的にはstr[i]をstr[i]-'0'として引数を渡したがis_not_rang関数内で反映されない
 // →ft_atoi関数内でprintfを行って見るとis_not_rang関数にも反映された。
 // →テスターでも反映されないものが判定されいたので割とガチで謎
-
+//  #include<stdio.h>
 // int main (void)
 // {
 //     char a [] = "-4";

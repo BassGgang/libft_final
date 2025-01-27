@@ -6,7 +6,7 @@
 #    By: kmatsuna <kmatsuna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 15:38:32 by kmatsuna          #+#    #+#              #
-#    Updated: 2024/06/22 23:09:47 by kmatsuna         ###   ########.fr        #
+#    Updated: 2025/01/27 19:18:21 by kmatsuna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,3 +94,10 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
+
+# so :
+# 	$(CC) -fPIC $(CFLAGS) $(SRCS)
+# 	gcc -shared -o libft.so $(OBJS)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
